@@ -1,0 +1,10 @@
+# python built-ins
+venv/*
+**/__pycache__/*
+
+# jupyter
+**/.ipynb_checkpoints/*
+
+#jupytext
+jupytext.toml
+**/scripts/*
