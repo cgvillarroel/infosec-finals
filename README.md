@@ -7,6 +7,13 @@ Results can be seen in the [main.ipynb](https://github.com/cgvillarroel/infosec-
 
 ## Usage
 
+Clone the repo:
+
+```pwsh
+git clone https://github.com/cgvillarroel/insofec-finals
+cd infosec-finals
+```
+
 Create a virtual environment and install dependencies:
 
 ```pwsh
