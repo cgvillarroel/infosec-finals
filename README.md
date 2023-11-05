@@ -1,6 +1,10 @@
 # infosec-finals
 INFOSEC final project code and demo
 
+## Results
+
+Results can be seen in the [main.ipynb](https://github.com/cgvillarroel/infosec-finals/blob/main/main.ipynb) file.
+
 ## Usage
 
 Create a virtual environment and install dependencies:
