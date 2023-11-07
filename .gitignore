@@ -8,3 +8,4 @@ venv/*
 #jupytext
 jupytext.toml
 **/scripts/*
+**/*.ju.py
