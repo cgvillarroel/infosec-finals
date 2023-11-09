@@ -31,35 +31,30 @@ class Preprocessor:
         if self.scaler is None:
             raise TypeError("No scaler provided (use `Preprocessor.load_scaler`)")
 
-        # different dataset, match differing columns
+        # prep data
         self.data.columns = self.data.columns.str.strip()
         self.data["Label"] = self.data["Label"].apply(lambda x: 1 if x == "DDoS" else 0)
-        self.data = self.data.rename(columns={
-            "Label": "Class",
-            "Average Packet Size": "Avg Packet Size",
-            "Max Packet Length": "Packet Length Max"
-        })
 
         # get columns of interest
         self.data = self.data[[
-            "Avg Packet Size",
+            "Average Packet Size",
             "Avg Bwd Segment Size",
             "Bwd Packet Length Max",
             "Bwd Packet Length Mean",
             "Bwd Packet Length Min",
             "Bwd Packet Length Std",
             "Down/Up Ratio",
-            "Packet Length Max",
+            "Max Packet Length",
             "Packet Length Std",
             "Packet Length Variance",
-            "Class"
+            "Label"
         ]] # type: ignore
 
         # scale by same amount as training data
-        # self.scaler: MinMaxScaler = load("./utils/scaler.joblib")
-        # self.data = pd.DataFrame(
-        #     self.scaler.transform(self.data),
-        #     columns=self.data.columns
-        # )
-        
+        self.scaler: MinMaxScaler = load("./utils/scaler.joblib")
+        self.data = pd.DataFrame(
+            self.scaler.transform(self.data),
+            columns=self.data.columns
+        )
+
         return self.data
