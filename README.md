@@ -3,9 +3,9 @@ INFOSEC final project code and demo
 
 ## Results
 
-Results can be seen in the `[model_generator/model_generator.ipynb](https://github.com/cgvillarroel/infosec-finals/blob/demo/model_generator/model_generator.ipynb)` file.
+Results can be seen in the [`model_generator/model_generator.ipynb`](https://github.com/cgvillarroel/infosec-finals/blob/demo/model_generator/model_generator.ipynb) file.
 
-A demo for testing individual samples can be seen in the `[demo.ipynb](https://github.com/cgvillarroel/infosec-finals/blob/demo/demo.ipynb)` file.
+A demo for testing individual samples can be seen in the [`demo.ipynb`](https://github.com/cgvillarroel/infosec-finals/blob/demo/demo.ipynb) file.
 
 ## Usage
 
